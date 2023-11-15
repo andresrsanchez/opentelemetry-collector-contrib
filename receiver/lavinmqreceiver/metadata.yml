@@ -1,0 +1,10 @@
+type: lavinmq
+
+status:
+  class: receiver
+  stability:
+    alpha: [metrics]
+    development: [logs]
+  distributions: [contrib]
+  codeowners:
+    active: [andres]
