@@ -2,7 +2,6 @@ package lavinmqreceiver
 
 import (
 	"context"
-	"fmt"
 	"testing"
 	"time"
 
@@ -30,10 +29,8 @@ func TestLogsReceiver_Collect(t *testing.T) {
 		client:        c,
 		nextConsumer:  new(consumertest.LogsSink),
 		clientStorage: storage.NewNopClient(),
-		curr_buffer:   1,
 		obsrecv:       obsr,
 	}
-	go r.startCollecting(context.TODO())
+	r.startCollecting(context.TODO())
 	time.Sleep(3 * time.Second)
-	fmt.Println("lol")
 }
